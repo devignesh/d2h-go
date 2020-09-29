@@ -249,6 +249,26 @@ func (d *Dth) getSubscriptionDetails() {
 //Updating email and phone nuber
 func (d *Dth) updateEmailandPhone() {
 
+	fmt.Println("Update email and phone number for notifications")
+
+	var email string
+	var phone int
+	fmt.Println("Enter the email:")
+	fmt.Scanln(&email)
+	fmt.Println("Enter phone:")
+
+	fmt.Scanln(&phone)
+
+	d.email = email
+	d.phone = phone
+
+	fmt.Println("Customer Name:", d.name)
+	fmt.Println("Updated Email Address:", d.email)
+	fmt.Println("Updated Phone Number:", d.phone)
+	fmt.Println("Email and Phone updated successfully\n")
+
+	return
+
 }
 
 func emailAndPhone() {
