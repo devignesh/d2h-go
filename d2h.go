@@ -186,17 +186,17 @@ func (d *Dth) addChannelToexsistSubscription() {
 		}
 		totalprice = totalprice + chanelPrice
 
-	}
+		if totalprice > d.balance {
+			fmt.Println("Please recharge your account, Your current Balance is :", d.balance, "\n")
+			return
+		}
 
-	if totalprice > d.balance {
-		fmt.Println("Please recharge your account, Your current Balance is :", d.balance, "\n")
-		return
-	}
+		d.balance = d.balance - totalprice // updating account balance
+		d.chanels = chanels                // updating account channels
+		fmt.Println("Channels added successfully.")
+		fmt.Println("Account balance:", d.balance, "Rs.\n")
 
-	d.balance = d.balance - totalprice // updating account balance
-	d.chanels = chanels                // updating account channels
-	fmt.Println("Channels added successfully.")
-	fmt.Println("Account balance:", d.balance, "Rs.\n")
+	}
 
 	return
 
@@ -216,7 +216,7 @@ func (d *Dth) subscribeNewService() {
 	servicePrice, ok := service[servicename]
 
 	if !ok {
-		fmt.Println("Please prpvide valid service", servicename)
+		fmt.Println("Please provide valid service:", servicename)
 		return
 	}
 
