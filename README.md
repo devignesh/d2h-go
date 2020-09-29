@@ -31,16 +31,16 @@ Please make sure that you are in inside gopath directory
 
 ##Sample Outputs
 
-Welcome to DishTV
+    Welcome to DishTV
 
-1: View current balance in the account
-2: Recharge Account
-3: View available packs, channels and services
-4: Subscribe to base packs
-5: Add channels to an existing subscription
-6: Subscribe to special services
-7: View current subscription details
-8: Update email and phone number for notifications
-9: Exit
+    1: View current balance in the account
+    2: Recharge Account
+    3: View available packs, channels and services
+    4: Subscribe to base packs
+    5: Add channels to an existing subscription
+    6: Subscribe to special services
+    7: View current subscription details
+    8: Update email and phone number for notifications
+    9: Exit
 
-Enter the option
+    Enter the option
