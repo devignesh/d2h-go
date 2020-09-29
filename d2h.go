@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"strings"
 )
 
 //Declaring user defined fields
@@ -165,6 +166,39 @@ func (d *Dth) subscribrChannelPacks() {
 
 //Adding channels
 func (d *Dth) addChannelToexsistSubscription() {
+
+	fmt.Println("Add channels to existing subscription")
+	var chanels string
+
+	fmt.Println("Enter channel names to add (separated by commas):")
+	fmt.Scanln(&chanels)
+
+	chanalInput := strings.Split(chanels, ",")
+
+	var totalprice int
+
+	for _, value := range chanalInput {
+
+		chanelPrice, ok := chanalMap[value]
+		if !ok {
+			fmt.Println("The channels are not valid", value)
+			continue
+		}
+		totalprice = totalprice + chanelPrice
+
+	}
+
+	if totalprice > d.balance {
+		fmt.Println("Please recharge your account, Your current Balance is :", d.balance, "\n")
+		return
+	}
+
+	d.balance = d.balance - totalprice // updating account balance
+	d.chanels = chanels                // updating account channels
+	fmt.Println("Channels added successfully.")
+	fmt.Println("Account balance:", d.balance, "Rs.\n")
+
+	return
 
 }
 
