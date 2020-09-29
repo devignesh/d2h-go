@@ -37,6 +37,11 @@ var service = map[string]int{
 // getting Current Balance
 func (d *Dth) getBalance() {
 
+	fmt.Println("View current balance in the account")
+	fmt.Println("Current balance is", d.balance, "Rs.\n")
+
+	return
+
 }
 
 //Adding New Balance
