@@ -47,6 +47,16 @@ func (d *Dth) getBalance() {
 //Adding New Balance
 func (d *Dth) recharge() {
 
+	fmt.Println("Recharge Account")
+	var updatebalance int
+	fmt.Println("Enter the amount to recharge:")
+	fmt.Scanf("%d", &updatebalance)
+
+	d.balance = d.balance + updatebalance // Balance update
+	fmt.Println("Recharge completed successfully.\nCurrent balance is", d.balance, "Rs", "\n")
+
+	return
+
 }
 
 //Showing list of services, packs and chanels
