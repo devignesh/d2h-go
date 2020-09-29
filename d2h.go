@@ -62,6 +62,24 @@ func (d *Dth) recharge() {
 //Showing list of services, packs and chanels
 func (d *Dth) listOffers() {
 
+	fmt.Println("Available packs for subscription:")
+
+	for dth, price := range pack {
+		fmt.Println(dth, price)
+	}
+	fmt.Println("Available channels for subscription")
+
+	for channame, price := range chanalMap {
+		fmt.Println(channame, price)
+	}
+	fmt.Println("Available services for subscription")
+
+	for servicename, price := range service {
+		fmt.Println(servicename, "service:", price, "\n")
+	}
+
+	return
+
 }
 
 //Subscribe new packages
