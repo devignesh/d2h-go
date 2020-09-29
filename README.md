@@ -32,7 +32,7 @@ Please make sure that you are in inside gopath directory
 
     ./d2h-go      // Run the go
 
-##Sample Outputs
+## Sample Outputs
 
     Welcome to DishTV
 
