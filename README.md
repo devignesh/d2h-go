@@ -9,6 +9,9 @@ DishTV offers multiple predefined channel packages (called as base packs
 henceforth) and multiple services. Base packs available to purchase are Gold and
 Silver which comes with certain channels.
 
+simple command-line application
+Deftouch.co | Backend Developer
+
 ---
 
 ## Run the Go application:
