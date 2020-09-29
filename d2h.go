@@ -238,6 +238,12 @@ func (d *Dth) subscribeNewService() {
 //Listing account Details
 func (d *Dth) getSubscriptionDetails() {
 
+	fmt.Println("View current subscription details\n")
+	fmt.Println("Currently subscribed packs and channels:", d.packs, "+", d.chanels, "\n")
+	fmt.Println("Currently subscribed services:", d.services, "\n")
+
+	return
+
 }
 
 //Updating email and phone nuber
