@@ -205,6 +205,34 @@ func (d *Dth) addChannelToexsistSubscription() {
 //Subscribe New services
 func (d *Dth) subscribeNewService() {
 
+	fmt.Println("Subscribe to special services")
+
+	var servicename string
+	var servicePrice int
+
+	fmt.Println("Enter the service name:")
+	fmt.Scanln(&servicename)
+
+	servicePrice, ok := service[servicename]
+
+	if !ok {
+		fmt.Println("Please prpvide valid service", servicename)
+		return
+	}
+
+	if servicePrice > d.balance {
+		fmt.Println("Please recharge your account, Your current Balance is :", d.balance, "\n")
+		return
+	}
+
+	d.services = servicename
+	fmt.Println("Service subscribed successfully")
+	d.balance = d.balance - servicePrice
+	fmt.Println("Account balance:", d.balance)
+	emailAndPhone()
+
+	return
+
 }
 
 //Listing account Details
@@ -214,6 +242,13 @@ func (d *Dth) getSubscriptionDetails() {
 
 //Updating email and phone nuber
 func (d *Dth) updateEmailandPhone() {
+
+}
+
+func emailAndPhone() {
+
+	fmt.Println("Email notification sent successfully")
+	fmt.Println("SMS notification sent successfully\n")
 
 }
 
