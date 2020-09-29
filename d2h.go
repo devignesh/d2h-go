@@ -85,6 +85,82 @@ func (d *Dth) listOffers() {
 //Subscribe new packages
 func (d *Dth) subscribrChannelPacks() {
 
+	fmt.Println("Subscribe to channel packs")
+
+	var packs string
+	var month int
+	var montlyprice int
+	silvar := "S"
+	gold := "G"
+	var totalAmount int
+
+	fmt.Println("Enter the Pack you wish to subscribe: (Silver: 'S', Gold: 'G'):")
+	fmt.Scanln(&packs)
+
+	if packs == silvar {
+
+		d.packs = "Silvar"
+
+		montlyprice = pack["Silver pack:  Zee, Sony, Star Plus:"]
+		fmt.Println("No of months:")
+		fmt.Scanln(&month)
+
+	} else if packs == gold {
+
+		d.packs = "Gold"
+
+		montlyprice = pack["Gold Pack: Zee, Sony, Star Plus, Discovery, NatGeo:"]
+		fmt.Println("No of months:")
+		fmt.Scanln(&month)
+
+	} else {
+		fmt.Println("Please provide valid option")
+	}
+
+	fmt.Println("Monthly price:", montlyprice, "Rs.")
+	fmt.Println("No of months:", month)
+
+	totalAmount = montlyprice * month //Getting amount for subscription
+
+	fmt.Println("Subscription Amount:", totalAmount)
+
+	if month >= 3 {
+
+		discount := montlyprice * month
+		value := discount / 10
+		totalamount := totalAmount - value //Final amount for subscription
+
+		if totalAmount > d.balance { //validating the balance
+			fmt.Println("Please recharge your account, Your current Balance is :", d.balance)
+			return
+		}
+
+		d.balance = d.balance - totalamount // Updatting the user account balance
+		fmt.Println("Discount applied:", value, "Rs.")
+		fmt.Println("Final Price after discount:", totalamount, "Rs.")
+		fmt.Println("Account balance:", d.balance)
+		emailAndPhone()
+
+	} else {
+
+		if totalAmount > d.balance { //validating the balance
+			fmt.Println("Please recharge your account, Your current Balance is :", d.balance)
+			return
+		}
+
+		d.balance = d.balance - totalAmount // Updatting the user account balance
+		fmt.Println("Account balance:", d.balance)
+		emailAndPhone()
+
+	}
+
+	if montlyprice == montlyprice {
+
+		fmt.Println("You have successfully subscribed the following packs - ", d.packs, "\n")
+	}
+
+	return
+
 }
 
 //Adding channels
