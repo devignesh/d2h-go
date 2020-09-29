@@ -193,10 +193,10 @@ func (d *Dth) addChannelToexsistSubscription() {
 
 		d.balance = d.balance - totalprice // updating account balance
 		d.chanels = chanels                // updating account channels
-		fmt.Println("Channels added successfully.")
-		fmt.Println("Account balance:", d.balance, "Rs.\n")
 
 	}
+	fmt.Println("Channels added successfully.")
+	fmt.Println("Account balance:", d.balance, "Rs.\n")
 
 	return
 
