@@ -42,7 +42,6 @@ func (d *Dth) getBalance() {
 	fmt.Println("Current balance is", d.balance, "Rs.\n")
 
 	return
-
 }
 
 //Adding New Balance
@@ -57,7 +56,6 @@ func (d *Dth) recharge() {
 	fmt.Println("Recharge completed successfully.\nCurrent balance is", d.balance, "Rs", "\n")
 
 	return
-
 }
 
 //Showing list of services, packs and chanels
@@ -80,7 +78,6 @@ func (d *Dth) listOffers() {
 	}
 
 	return
-
 }
 
 //Subscribe new packages
@@ -161,7 +158,6 @@ func (d *Dth) subscribrChannelPacks() {
 	}
 
 	return
-
 }
 
 //Adding channels
@@ -193,13 +189,12 @@ func (d *Dth) addChannelToexsistSubscription() {
 
 		d.balance = d.balance - totalprice // updating account balance
 		d.chanels = chanels                // updating account channels
-
 	}
+
 	fmt.Println("Channels added successfully.")
 	fmt.Println("Account balance:", d.balance, "Rs.\n")
 
 	return
-
 }
 
 //Subscribe New services
@@ -232,7 +227,6 @@ func (d *Dth) subscribeNewService() {
 	emailAndPhone()
 
 	return
-
 }
 
 //Listing account Details
@@ -243,7 +237,6 @@ func (d *Dth) getSubscriptionDetails() {
 	fmt.Println("Currently subscribed services:", d.services, "\n")
 
 	return
-
 }
 
 //Updating email and phone nuber
@@ -268,14 +261,12 @@ func (d *Dth) updateEmailandPhone() {
 	fmt.Println("Email and Phone updated successfully\n")
 
 	return
-
 }
 
 func emailAndPhone() {
 
 	fmt.Println("Email notification sent successfully")
 	fmt.Println("SMS notification sent successfully\n")
-
 }
 
 //Function for option in D2h
@@ -291,7 +282,6 @@ func help() {
 	fmt.Println("8: Update email and phone number for notifications")
 	fmt.Println("9: Exit\n")
 	fmt.Println("Enter the option")
-
 }
 
 //Main function
@@ -299,7 +289,7 @@ func main() {
 
 	fmt.Println("Welcome to DishTV\n")
 
-	dt := &Dth{name: "Vignesh", email: "vinesh1865@gmail.com", phone: 9047660920, balance: 100, packs: "Gold", chanels: "Zee, Sony", services: "LearnEnglish"}
+	dt := &Dth{name: "Vignesh", email: "vinesh1865@gmail.com", phone: 9047660920, balance: 100, packs: "Gold", chanels: "Zee,Sony", services: "LearnEnglish"}
 	// fmt.Println(dt)
 	help()
 
@@ -313,51 +303,49 @@ func main() {
 
 		if option > 9 {
 
-			fmt.Println("Please Enter valid option\n")
-			help()
+			fmt.Println("Please Enter valid option: 1 - 9 \n")
 
-		} else {
-
-			switch option {
-
-			case 1:
-
-				dt.getBalance()
-
-			case 2:
-
-				dt.recharge()
-
-			case 3:
-
-				dt.listOffers()
-
-			case 4:
-
-				dt.subscribrChannelPacks()
-
-			case 5:
-
-				dt.addChannelToexsistSubscription()
-
-			case 6:
-
-				dt.subscribeNewService()
-
-			case 7:
-
-				dt.getSubscriptionDetails()
-
-			case 8:
-
-				dt.updateEmailandPhone()
-
-			case 9:
-
-				os.Exit(1)
-			}
-			help()
-			continue
 		}
+
+		switch option {
+
+		case 1:
+
+			dt.getBalance()
+
+		case 2:
+
+			dt.recharge()
+
+		case 3:
+
+			dt.listOffers()
+
+		case 4:
+
+			dt.subscribrChannelPacks()
+
+		case 5:
+
+			dt.addChannelToexsistSubscription()
+
+		case 6:
+
+			dt.subscribeNewService()
+
+		case 7:
+
+			dt.getSubscriptionDetails()
+
+		case 8:
+
+			dt.updateEmailandPhone()
+
+		case 9:
+
+			os.Exit(1)
+		}
+		help()
+		continue
 	}
 }
