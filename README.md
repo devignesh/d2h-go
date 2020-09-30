@@ -1,4 +1,4 @@
-# d2h-go
+# d2h-go Application
 
 D2H Dish TV Go application
 
