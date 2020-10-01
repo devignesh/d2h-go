@@ -10,7 +10,7 @@ henceforth) and multiple services. Base packs available to purchase are Gold and
 Silver which comes with certain channels.
 
 simple command-line application
-Deftouch.co | Backend Developer
+https://www.Deftouch.co | Backend Developer
 
 ---
 
@@ -174,7 +174,6 @@ Please make sure that you are in inside gopath directory
     Enter the option
     6
 
-
     Subscribe to special services
     Enter the service name:
     LearnCooking
@@ -215,7 +214,6 @@ Please make sure that you are in inside gopath directory
     Enter the option
     8
 
-
     Update email and phone number for notifications
     Enter the email:
     vigneshkumar.mca2016@adhiyamaan.in
@@ -239,5 +237,4 @@ Please make sure that you are in inside gopath directory
     Enter the option
     9
     exit status 1
-
 ================================================================
