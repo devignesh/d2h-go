@@ -237,4 +237,4 @@ Please make sure that you are in inside gopath directory
     Enter the option
     9
     exit status 1
-================================================================
+===============================================================
